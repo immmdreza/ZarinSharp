@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using ZarinSharp.Types;
 
 namespace ZarinSharp.Responses
 {
@@ -15,7 +16,8 @@ namespace ZarinSharp.Responses
             string cardPan,
             long refId,
             string feeType,
-            long fee)
+            long fee,
+            IEnumerable<WageInfo>? wages = default)
         {
             Code = code;
             Message = message;
@@ -24,6 +26,7 @@ namespace ZarinSharp.Responses
             RefId = refId;
             FeeType = feeType;
             Fee = fee;
+            Wages = wages;
         }
 
         /// <summary>
@@ -67,5 +70,11 @@ namespace ZarinSharp.Responses
         /// </summary>
         [JsonPropertyName("fee")]
         public long Fee { get; set; }
+
+        /// <summary>
+        /// Optional. Information about a wages payment request.
+        /// </summary>
+        [JsonPropertyName("wages")]
+        public IEnumerable<WageInfo>? Wages { get; set; }
     }
 }

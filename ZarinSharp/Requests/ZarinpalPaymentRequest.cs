@@ -11,13 +11,13 @@ namespace ZarinSharp.Requests
         : RequestBase<ResponseBase<ZarinpalPaymentRequestRespond>>
     {
         /// <summary>
-        /// Your MerchantId or Token from <see href="https://next.zarinpal.com"/>
+        /// Your MerchantId or Token from <see href="https://next.zarinpal.com"/>.
         /// </summary>
         [JsonPropertyName("merchant_id")]
         public string MerchantId { get; }
 
         /// <summary>
-        /// The amount of payment
+        /// The amount of payment.
         /// </summary>
         [JsonPropertyName("amount")]
         public long Amount { get; }
@@ -29,16 +29,22 @@ namespace ZarinSharp.Requests
         public string CallbackUrl { get; }
 
         /// <summary>
-        /// Description of the payment
+        /// Description of the payment.
         /// </summary>
         [JsonPropertyName("description")]
         public string Description { get; }
 
         /// <summary>
-        /// Meta data contains mobile and email
+        /// Optional. Meta data contains mobile and email.
         /// </summary>
         [JsonPropertyName("metadata")]
         public CustomerInfo? Metadata { get; set; }
+
+        /// <summary>
+        /// Optional. Information about a wages payment request.
+        /// </summary>
+        [JsonPropertyName("wages")]
+        public IEnumerable<WageInfo>? Wages { get; set; }
 
         /// <summary>
         /// Represents a zarinpal payment request.
