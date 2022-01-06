@@ -35,6 +35,7 @@ namespace ZarinSharp
         /// <param name="description">Description of payment</param>
         /// <param name="customerInfo">Customer's info such as email mobile, ...</param>
         /// <param name="wageInfos">A collection of wages</param>
+        /// <param name="callback_url">Overrides callback url specified in configs</param>
         /// <exception cref="ZarinpalException"></exception>
         public static async Task<ZarinpalPaymentRequestRespond> PaymentRequestAsync(
             this ZarinClient client,
@@ -42,6 +43,7 @@ namespace ZarinSharp
             string description,
             CustomerInfo? customerInfo = null,
             IEnumerable<WageInfo>? wageInfos = null,
+            string? callback_url = default,
             CancellationToken cancellationToken = default)
         {
             client.ThrowIfNull(nameof(client));
@@ -50,7 +52,7 @@ namespace ZarinSharp
                 new ZarinpalPaymentRequest(
                     client.Token,
                     amount,
-                    client.Configuration.CallbackUrl,
+                    callback_url?? client.Configuration.CallbackUrl,
                     description)
                 {
                     Metadata = customerInfo,
