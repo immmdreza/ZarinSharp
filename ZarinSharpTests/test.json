@@ -1,0 +1,17 @@
+{
+    "data":[],
+    "errors":
+    {
+        "code":-9,
+        "message":"The input params invalid, validation error.",
+        "validations":
+        [
+            {
+                "merchant_id": "The merchant id must be at least 36 characters."
+            },
+            {
+                "merchant_id": "string is not a valid uuid."
+            }
+        ]
+    }
+}
