@@ -11,10 +11,11 @@
     <PackageProjectUrl></PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/immmdreza/ZarinSharp</RepositoryUrl>
+    <PackageTags>zarinpal;csharp;dotnet;6.0;زرین پال;api;</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\TelegramBotApiGenerator\README.md">
+    <None Include="..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
