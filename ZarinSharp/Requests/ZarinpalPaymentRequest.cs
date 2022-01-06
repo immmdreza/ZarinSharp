@@ -1,6 +1,8 @@
 ﻿using System.Text.Json.Serialization;
+using ZarinSharp.Converters;
 using ZarinSharp.Responses;
 using ZarinSharp.Types;
+using ZarinSharp.Types.Enums;
 
 namespace ZarinSharp.Requests
 {
@@ -45,6 +47,13 @@ namespace ZarinSharp.Requests
         /// </summary>
         [JsonPropertyName("wages")]
         public IEnumerable<WageInfo>? Wages { get; set; }
+
+        /// <summary>
+        /// Indicates the currency of current request amount 
+        /// </summary>
+        [JsonPropertyName("currency")]
+        [JsonConverter(typeof(CurrencyConverter))]
+        public Currency? Currency { get; set; }
 
         /// <summary>
         /// Represents a zarinpal payment request.

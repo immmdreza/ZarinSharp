@@ -4,6 +4,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
+using ZarinSharp.Types.Enums;
 
 namespace ZarinSharp.Requests.Tests
 {
@@ -59,6 +60,27 @@ namespace ZarinSharp.Requests.Tests
                 WriteIndented = true
             });
             Assert.AreEqual(exceptedJson, seialized);
+        }
+
+        [TestMethod()]
+        public void ZarinpalPaymentRequest_CurrencyTest()
+        {
+            var req = new ZarinpalPaymentRequest(
+                "1344b5d4-0048-11e8-94db-005056a205be",
+                20000,
+                "www.url.com",
+                "description")
+            {
+                Currency = Currency.IRT
+            };
+
+            var seialized = JsonSerializer.Serialize(req, new JsonSerializerOptions
+            {
+                Encoder = JavaScriptEncoder.Create(UnicodeRanges.All),
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+                WriteIndented = true
+            });
+            System.Console.WriteLine();
         }
     }
 }
