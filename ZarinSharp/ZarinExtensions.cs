@@ -1,6 +1,7 @@
 ﻿using ZarinSharp.Requests;
 using ZarinSharp.Responses;
 using ZarinSharp.Types;
+using ZarinSharp.Types.Enums;
 
 namespace ZarinSharp
 {
@@ -36,6 +37,7 @@ namespace ZarinSharp
         /// <param name="customerInfo">Customer's info such as email mobile, ...</param>
         /// <param name="wageInfos">A collection of wages</param>
         /// <param name="callback_url">Overrides callback url specified in configs</param>
+        /// <param name="currency">IRR or IRT as currency</param>
         /// <exception cref="ZarinpalException"></exception>
         public static async Task<ZarinpalPaymentRequestRespond> PaymentRequestAsync(
             this ZarinClient client,
@@ -44,6 +46,7 @@ namespace ZarinSharp
             CustomerInfo? customerInfo = null,
             IEnumerable<WageInfo>? wageInfos = null,
             string? callback_url = default,
+            Currency? currency = default,
             CancellationToken cancellationToken = default)
         {
             client.ThrowIfNull(nameof(client));
@@ -56,7 +59,8 @@ namespace ZarinSharp
                     description)
                 {
                     Metadata = customerInfo,
-                    Wages = wageInfos
+                    Wages = wageInfos,
+                    Currency = currency
                 },
                 cancellationToken);
 
