@@ -34,12 +34,14 @@ namespace ZarinSharp
         /// <param name="amount">The amount of payment in Toman</param>
         /// <param name="description">Description of payment</param>
         /// <param name="customerInfo">Customer's info such as email mobile, ...</param>
+        /// <param name="wageInfos">A collection of wages</param>
         /// <exception cref="ZarinpalException"></exception>
         public static async Task<ZarinpalPaymentRequestRespond> PaymentRequestAsync(
             this ZarinClient client,
             long amount,
             string description,
             CustomerInfo? customerInfo = null,
+            IEnumerable<WageInfo>? wageInfos = null,
             CancellationToken cancellationToken = default)
         {
             client.ThrowIfNull(nameof(client));
@@ -51,7 +53,8 @@ namespace ZarinSharp
                     client.Configuration.CallbackUrl,
                     description)
                 {
-                    Metadata = customerInfo
+                    Metadata = customerInfo,
+                    Wages = wageInfos
                 },
                 cancellationToken);
 
