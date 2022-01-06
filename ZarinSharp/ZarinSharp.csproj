@@ -12,6 +12,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/immmdreza/ZarinSharp</RepositoryUrl>
     <PackageTags>zarinpal;csharp;dotnet;6.0;زرین پال;api;</PackageTags>
+    <PackageId>ZarinpalSharp</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
