@@ -22,30 +22,30 @@ namespace ZarinSharp.Responses
         /// Response code in number
         /// </summary>
         [JsonPropertyName("code")]
-        public int Code { get; set; }
+        public int Code { get; }
 
         /// <summary>
         /// The message.
         /// </summary>
         [JsonPropertyName("message")]
-        public string Message { get; set; }
+        public string Message { get; }
 
         /// <summary>
         /// Unique identifier for this payment
         /// </summary>
         [JsonPropertyName("authority")]
-        public string Authority { get; set; }
+        public string Authority { get; }
 
         /// <summary>
         /// The type of fee payment - Could be the Merchant or Customer
         /// </summary>
         [JsonPropertyName("fee_type")]
-        public string FeeType { get; set; }
+        public string FeeType { get; }
 
         /// <summary>
         /// Fee amount
         /// </summary>
         [JsonPropertyName("fee")]
-        public long Fee { get; set; }
+        public long Fee { get; }
     }
 }
