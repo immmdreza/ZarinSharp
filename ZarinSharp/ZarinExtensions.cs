@@ -61,7 +61,7 @@ namespace ZarinSharp
                 cancellationToken);
 
             if (response.Data is null)
-                throw new ZarinpalException(500, "Unknown error!");
+                throw new ZarinpalException(-1000, "Unknown error!");
 
             response.Data.EnsureSuccess();
 
@@ -90,9 +90,56 @@ namespace ZarinSharp
                 cancellationToken);
 
             if (response.Data is null)
-                throw new ZarinpalException(500, "Unknown error!");
+                throw new ZarinpalException(-1000, "Unknown error!");
 
             response.Data.EnsureVerifiedOrDuplicated();
+
+            return response.Data;
+        }
+
+        /// <summary>
+        /// Request to get last 100 unverified payments.
+        /// </summary>
+        /// <exception cref="ZarinpalException"></exception>
+        public static async Task<ZarinpalUnVerifiedResponse> GetUnVerifiedAsync(
+            this ZarinClient client)
+        {
+            client.ThrowIfNull(nameof(client));
+
+            var response = await client.SendRequestAsync(
+                new ZarinpalUnVerifiedRequest(client.Token));
+
+            if (response.Data is null)
+                throw new ZarinpalException(-1000, "Unknown error!");
+
+            response.Data.EnsureSuccess();
+
+            return response.Data;
+        }
+
+        /// <summary>
+        /// Request to refund a payment.
+        /// </summary>
+        /// <param name="authority">The authority of the payment.</param>
+        /// <param name="accessToken">Your access token from <see href="https://next.zarinpal.com"/></param>
+        /// <exception cref="ZarinpalException"></exception>
+        public static async Task<ZarinpalRefundResponse> RefundAsync(
+            this ZarinClient client,
+            string authority,
+            string accessToken)
+        {
+            client.ThrowIfNull(nameof(client));
+
+            var response = await client.SendRequestAsync(
+                new ZarinpalRefundRequest(
+                    client.Token,
+                    authority,
+                    accessToken));
+
+            if (response.Data is null)
+                throw new ZarinpalException(-1000, "Unknown error!");
+
+            response.Data.EnsureSuccess();
 
             return response.Data;
         }

@@ -85,6 +85,12 @@ namespace ZarinSharp
 
             var content = request.GetHttpContent(_jsonSerializerOptions);
 
+            if (request is IRequireAuthorization auth)
+            {
+                content.Headers.Add("authorization", $"Bearer {auth.AccessToken}");
+                content.Headers.Add("cache-control", $"no-cache");
+            }
+
             HttpResponseMessage response = await _httpClient.PostAsync(
                 requestUri, content, cancellationToken);
 

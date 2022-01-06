@@ -3,7 +3,7 @@ using ZarinSharp.Types;
 
 namespace ZarinSharp.Responses
 {
-    public class ZarinpalUnVerifiedResponse
+    public class ZarinpalUnVerifiedResponse : IZarinpalResponseData
     {
         [JsonConstructor]
         public ZarinpalUnVerifiedResponse(int code, string message, IEnumerable<AuthorityInfo> authorities)
@@ -13,15 +13,9 @@ namespace ZarinSharp.Responses
             Authorities = authorities;
         }
 
-        /// <summary>
-        /// Response code in number
-        /// </summary>
         [JsonPropertyName("code")]
         public int Code { get; }
 
-        /// <summary>
-        /// The message.
-        /// </summary>
         [JsonPropertyName("message")]
         public string Message { get; }
 

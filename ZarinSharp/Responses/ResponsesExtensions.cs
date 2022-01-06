@@ -20,9 +20,9 @@ namespace ZarinSharp
         /// </summary>
         /// <exception cref="ZarinpalException"></exception>
         public static void EnsureSuccess(
-            this ZarinpalPaymentRequestRespond response)
+            this IZarinpalResponseData response)
         {
-            if (response.Code != 100 || string.IsNullOrEmpty(response.Authority))
+            if (response.Code != 100)
                 throw new ZarinpalException(response.Code, response.Message);
         }
 

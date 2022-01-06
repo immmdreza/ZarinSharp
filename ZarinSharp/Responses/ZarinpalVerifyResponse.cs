@@ -6,7 +6,7 @@ namespace ZarinSharp.Responses
     /// <summary>
     /// Represents a response to verify request.
     /// </summary>
-    public class ZarinpalVerifyResponse
+    public class ZarinpalVerifyResponse : IZarinpalResponseData
     {
         [JsonConstructor]
         public ZarinpalVerifyResponse(
@@ -29,15 +29,9 @@ namespace ZarinSharp.Responses
             Wages = wages;
         }
 
-        /// <summary>
-        /// Response code in number
-        /// </summary>
         [JsonPropertyName("code")]
         public int Code { get; }
 
-        /// <summary>
-        /// The message.
-        /// </summary>
         [JsonPropertyName("message")]
         public string Message { get; }
 

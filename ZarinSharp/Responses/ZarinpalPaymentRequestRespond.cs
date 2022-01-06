@@ -5,7 +5,7 @@ namespace ZarinSharp.Responses
     /// <summary>
     /// Represents a response to a payment request
     /// </summary>
-    public class ZarinpalPaymentRequestRespond
+    public class ZarinpalPaymentRequestRespond: IZarinpalResponseData
     {
         [JsonConstructor]
         public ZarinpalPaymentRequestRespond(
@@ -18,15 +18,9 @@ namespace ZarinSharp.Responses
             Fee = fee;
         }
 
-        /// <summary>
-        /// Response code in number
-        /// </summary>
         [JsonPropertyName("code")]
         public int Code { get; }
 
-        /// <summary>
-        /// The message.
-        /// </summary>
         [JsonPropertyName("message")]
         public string Message { get; }
 
