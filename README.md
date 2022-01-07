@@ -1,5 +1,5 @@
 # ZarinpalSharp
-.NET 6.0 client for zarinpal api v4
+.NET Standard 2.1 client for zarinpal api v4
 
 Install from [Nuget](https://www.nuget.org/packages/ZarinpalSharp/) (⚠️ Not fully tested!)
 
@@ -43,3 +43,5 @@ var gatewayLink = payRequest.GetStartPaymentUrl()
   - [Refund](https://docs.zarinpal.com/paymentGateway/other/#refund)
 
 Almost everything is supported: `CardPan`, `Wages`, `Currency` and ...
+
+_Consider reading [Wiki](https://github.com/immmdreza/ZarinpalSharp/wiki) (even if it's empty)._
