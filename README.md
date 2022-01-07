@@ -45,7 +45,7 @@ var gatewayLink = payRequest.GetStartPaymentUrl()
 Almost everything is supported: `CardPan`, `Wages`, `Currency` and ...
 
 ## Asp .Net
-Install [ZarinpalSharp.Asp](https://www.nuget.org/packages/ZarinpalSharp.Asp/).
+Install [ZarinpalSharp.Asp](https://www.nuget.org/packages/ZarinpalSharp.Asp/). (Read [wiki](https://github.com/immmdreza/ZarinpalSharp/wiki/WebApplication) before installation.)
 
 Then take a look at [WebApplication Example](Examples/WebApplication)
 
