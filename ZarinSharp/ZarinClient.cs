@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading;
 using System.Threading.Tasks;
 using ZarinSharp.Requests;
@@ -21,7 +22,8 @@ namespace ZarinSharp
         private readonly string _baseUrl;
         private readonly JsonSerializerOptions _jsonSerializerOptions = new JsonSerializerOptions()
         {
-            DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+            NumberHandling = JsonNumberHandling.AllowReadingFromString,
         };
 
         public string Token { get; }
@@ -44,7 +46,7 @@ namespace ZarinSharp
             _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
             _baseUrl = ZarinpalUrlConfig.GetBaseUrl(_configuration.UseSandbox.NullableBool());
 
-            Token = _configuration.Token;
+            Token = _configuration.Token?? throw new ArgumentNullException("ZarinpalConfiguration.Token");
         }
 
         private Exception ParseError<T>(JsonDocument jsonDocument)
