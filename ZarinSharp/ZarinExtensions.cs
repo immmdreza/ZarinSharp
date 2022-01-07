@@ -1,4 +1,8 @@
-﻿using ZarinSharp.Requests;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
+using ZarinSharp.Requests;
 using ZarinSharp.Responses;
 using ZarinSharp.Types;
 using ZarinSharp.Types.Enums;
@@ -17,6 +21,7 @@ namespace ZarinSharp
         /// <param name="paramName">The name of parameter which can be null.</param>
         /// <typeparam name="T">Type of object</typeparam>
         internal static void ThrowIfNull<T>(this T? nullalbeThing, string paramName)
+            where T : class
         {
             if (nullalbeThing == null)
                 throw new ArgumentNullException(paramName);

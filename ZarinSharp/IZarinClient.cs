@@ -1,4 +1,6 @@
-﻿using ZarinSharp.Requests;
+﻿using System.Threading;
+using System.Threading.Tasks;
+using ZarinSharp.Requests;
 using ZarinSharp.Responses;
 using ZarinSharp.Types;
 
@@ -24,7 +26,8 @@ namespace ZarinSharp
         /// <returns>Returns <typeparamref name="T"/> on success</returns>
         /// <exception cref="ZarinpalException"></exception>
         public Task<ResponseBase<T>> SendRequestAsync<T>(
-            RequestBase<ResponseBase<T>> request, CancellationToken cancellationToken = default);
+            RequestBase<ResponseBase<T>> request, CancellationToken cancellationToken = default)
+                where T : class;
 
         /// <summary>
         /// Sends a request.

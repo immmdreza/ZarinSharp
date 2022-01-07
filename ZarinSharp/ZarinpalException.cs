@@ -1,4 +1,5 @@
-﻿using ZarinSharp.Types;
+﻿using System;
+using ZarinSharp.Types;
 
 namespace ZarinSharp
 {

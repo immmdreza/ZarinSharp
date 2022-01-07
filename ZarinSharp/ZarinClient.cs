@@ -1,4 +1,10 @@
-﻿using System.Text.Json;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Text.Json;
+using System.Threading;
+using System.Threading.Tasks;
 using ZarinSharp.Requests;
 using ZarinSharp.Responses;
 using ZarinSharp.Types;
@@ -13,7 +19,7 @@ namespace ZarinSharp
         private readonly ZarinpalConfiguration _configuration;
         private readonly HttpClient _httpClient;
         private readonly string _baseUrl;
-        private readonly JsonSerializerOptions _jsonSerializerOptions = new()
+        private readonly JsonSerializerOptions _jsonSerializerOptions = new JsonSerializerOptions()
         {
             DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
         };
@@ -77,6 +83,7 @@ namespace ZarinSharp
 
         public async Task<ResponseBase<T>> SendRequestAsync<T>(
             RequestBase<ResponseBase<T>> request, CancellationToken cancellationToken = default)
+                where T: class
         {
             if (request is null)
                 throw new ArgumentNullException(nameof(request));
@@ -96,7 +103,7 @@ namespace ZarinSharp
 
             if (response.IsSuccessStatusCode)
             {
-                var jsonString = await response.Content.ReadAsStringAsync(cancellationToken);
+                var jsonString = await response.Content.ReadAsStringAsync();
                 var doc = JsonDocument.Parse(jsonString);
 
                 var dataProperty = doc.RootElement.GetProperty("data");
@@ -113,7 +120,7 @@ namespace ZarinSharp
             }
             else
             {
-                var jsonString = await response.Content.ReadAsStringAsync(cancellationToken);
+                var jsonString = await response.Content.ReadAsStringAsync();
                 var doc = JsonDocument.Parse(jsonString);
                 throw ParseError<T>(doc);
             }

@@ -1,4 +1,6 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Text.Json.Serialization;
 using ZarinSharp.Types;
 
 namespace ZarinSharp.Responses
@@ -7,7 +9,7 @@ namespace ZarinSharp.Responses
     /// A response from zarinpal
     /// </summary>
     /// <typeparam name="T">Response data</typeparam>
-    public class ResponseBase<T>
+    public class ResponseBase<T> where T : class
     {
         /// <summary>
         /// The data of the response
