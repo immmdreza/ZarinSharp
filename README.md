@@ -9,7 +9,7 @@ For better understanding of what is this and why you should use this, please rea
 Using this package you can simply send a payment request with specified amount of money. customer will pay and you will verify!
 
 ## How to?
-See [ConsoleApplication](ConsoleApplication) for a quick example
+See [ConsoleApplication](Examples/ConsoleApplication) for a quick example
 
 You need `MerchantId` from [Zarinpal Panel](https://next.zarinpal.com/)
 

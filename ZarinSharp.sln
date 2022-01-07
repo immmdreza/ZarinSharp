@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZarinSharpTests", "ZarinSha
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{31B757E1-D51C-4D59-A419-ED5F379C1D75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication", "ConsoleApplication\ConsoleApplication.csproj", "{59EE58BC-0127-4F1E-941C-99FBA2ED190C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApplication", "Examples\ConsoleApplication\ConsoleApplication.csproj", "{2F85DD86-72EF-4F2D-9EC3-3B842D95947E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,16 +25,16 @@ Global
 		{2763130A-D3AE-4A72-A499-A6B5BFDBF1D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2763130A-D3AE-4A72-A499-A6B5BFDBF1D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2763130A-D3AE-4A72-A499-A6B5BFDBF1D1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{59EE58BC-0127-4F1E-941C-99FBA2ED190C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{59EE58BC-0127-4F1E-941C-99FBA2ED190C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{59EE58BC-0127-4F1E-941C-99FBA2ED190C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{59EE58BC-0127-4F1E-941C-99FBA2ED190C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F85DD86-72EF-4F2D-9EC3-3B842D95947E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F85DD86-72EF-4F2D-9EC3-3B842D95947E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F85DD86-72EF-4F2D-9EC3-3B842D95947E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F85DD86-72EF-4F2D-9EC3-3B842D95947E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{59EE58BC-0127-4F1E-941C-99FBA2ED190C} = {31B757E1-D51C-4D59-A419-ED5F379C1D75}
+		{2F85DD86-72EF-4F2D-9EC3-3B842D95947E} = {31B757E1-D51C-4D59-A419-ED5F379C1D75}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2AAC94CB-F058-4148-B55B-1031CCBF819A}
