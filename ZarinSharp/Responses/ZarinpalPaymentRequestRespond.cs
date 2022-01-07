@@ -1,4 +1,6 @@
 ﻿using System.Text.Json.Serialization;
+using ZarinSharp.Converters;
+using ZarinSharp.Types.Enums;
 
 namespace ZarinSharp.Responses
 {
@@ -9,7 +11,7 @@ namespace ZarinSharp.Responses
     {
         [JsonConstructor]
         public ZarinpalPaymentRequestRespond(
-            int code, string message, string authority, string feeType, long fee)
+            int code, string message, string authority, FeeType feeType, long fee)
         {
             Code = code;
             Message = message;
@@ -34,7 +36,8 @@ namespace ZarinSharp.Responses
         /// The type of fee payment - Could be the Merchant or Customer
         /// </summary>
         [JsonPropertyName("fee_type")]
-        public string FeeType { get; }
+        [JsonConverter(typeof(FeeTypeConverter))]
+        public FeeType FeeType { get; }
 
         /// <summary>
         /// Fee amount

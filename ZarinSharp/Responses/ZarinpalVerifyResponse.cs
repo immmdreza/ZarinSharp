@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
+using ZarinSharp.Converters;
 using ZarinSharp.Types;
+using ZarinSharp.Types.Enums;
 
 namespace ZarinSharp.Responses
 {
@@ -16,7 +18,7 @@ namespace ZarinSharp.Responses
             string cardHash,
             string cardPan,
             long refId,
-            string feeType,
+            FeeType feeType,
             long fee,
             IEnumerable<WageInfo>? wages = default)
         {
@@ -58,7 +60,8 @@ namespace ZarinSharp.Responses
         /// The type of fee payment - could be the Merchant or Customer
         /// </summary>
         [JsonPropertyName("fee_type")]
-        public string FeeType { get; }
+        [JsonConverter(typeof(FeeTypeConverter))]
+        public FeeType FeeType { get; }
 
         /// <summary>
         /// Fee amount

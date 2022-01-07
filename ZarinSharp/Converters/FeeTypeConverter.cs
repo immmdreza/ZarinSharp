@@ -5,26 +5,26 @@ using ZarinSharp.Types.Enums;
 
 namespace ZarinSharp.Converters
 {
-    internal class CurrencyConverter : JsonConverter<Currency>
+    internal class FeeTypeConverter : JsonConverter<FeeType>
     {
-        public override Currency Read(
+        public override FeeType Read(
             ref Utf8JsonReader reader,
             Type typeToConvert,
             JsonSerializerOptions options) => reader.GetString() switch
-        {
-            "IRR" => Currency.IRR,
-            "IRT" => Currency.IRT,
-            _ => throw new JsonException()
-        };
+            {
+                "Merchant" => FeeType.Merchant,
+                "Payer" => FeeType.Payer,
+                _ => FeeType.UnknownGuy
+            };
 
         public override void Write(
             Utf8JsonWriter writer,
-            Currency value,
+            FeeType value,
             JsonSerializerOptions options) => writer.WriteStringValue(value switch
-        {
-            Currency.IRR => "IRR",
-            Currency.IRT => "IRT",
-            _ => throw new JsonException()
-        });
+            {
+                FeeType.Merchant => "Merchant",
+                FeeType.Payer => "Payer",
+                _ => throw new JsonException()
+            });
     }
 }
