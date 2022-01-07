@@ -23,6 +23,14 @@ var getwayLink = payRequest.GetStartPaymentUrl();
 // ...
 
 // verify that payment.
-var verifyResult = await zarinClient.VerifyPaymentAsync(20000, payRequest.Authority);
+try
+{
+    var verifyResult = await zarinClient.VerifyPaymentAsync(20000, payRequest.Authority);
 
-Console.WriteLine($"Payment verified from {verifyResult.CardPan}");
+    Console.WriteLine($"Payment verified from {verifyResult.CardPan}");
+}
+// In case of verification fail
+catch (ZarinpalException e)
+{
+    Console.WriteLine(e.Message);
+}
