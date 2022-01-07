@@ -10,9 +10,11 @@
     <PackageProjectUrl></PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/immmdreza/ZarinSharp</RepositoryUrl>
-    <PackageTags>zarinpal;csharp;dotnet;6.0;زرین پال;api;</PackageTags>
+    <PackageTags>zarinpal;csharp;dotnet;netstandard;2.1;زرین پال;api;</PackageTags>
     <PackageId>ZarinpalSharp</PackageId>
-    <Version>1.2.0</Version>
+    <Version>1.2.1</Version>
+    <Product>ZarinpalSharp</Product>
+    <Company>ZarinpalSharp</Company>
   </PropertyGroup>
 
   <ItemGroup>
