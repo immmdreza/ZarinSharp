@@ -1,7 +1,7 @@
 # ZarinpalSharp
-.NET Standard 2.1 client for zarinpal api v4
+[.NET Standard 2.1](https://docs.microsoft.com/en-us/dotnet/standard/net-standard#net-implementation-support) client for zarinpal api v4
 
-Install from [Nuget](https://www.nuget.org/packages/ZarinpalSharp/) (⚠️ Not fully tested!)
+Install from [Nuget](https://www.nuget.org/packages/ZarinpalSharp/) (⚠️ Not fully tested! but i did some on common methods)
 
 ## Why?
 For better understanding of what is this and why you should use this, please read [Zarinpal docs](https://docs.zarinpal.com/paymentGateway/)
