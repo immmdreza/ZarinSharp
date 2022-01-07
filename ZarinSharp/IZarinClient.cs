@@ -6,6 +6,9 @@ using ZarinSharp.Types;
 
 namespace ZarinSharp
 {
+    /// <summary>
+    /// Base interface for ZarinClient
+    /// </summary>
     public interface IZarinClient
     {
         /// <summary>

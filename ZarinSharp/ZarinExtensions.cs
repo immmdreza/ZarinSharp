@@ -45,7 +45,7 @@ namespace ZarinSharp
         /// <param name="currency">IRR or IRT as currency</param>
         /// <exception cref="ZarinpalException"></exception>
         public static async Task<ZarinpalPaymentRequestRespond> PaymentRequestAsync(
-            this ZarinClient client,
+            this IZarinClient client,
             long amount,
             string description,
             CustomerInfo? customerInfo = null,
@@ -84,7 +84,7 @@ namespace ZarinSharp
         /// <param name="authority">The authority of the payment</param>
         /// <exception cref="ZarinpalException"></exception>
         public static async Task<ZarinpalVerifyResponse> VerifyPaymentAsync(
-            this ZarinClient client,
+            this IZarinClient client,
             long amount,
             string authority,
             CancellationToken cancellationToken = default)
@@ -111,7 +111,7 @@ namespace ZarinSharp
         /// </summary>
         /// <exception cref="ZarinpalException"></exception>
         public static async Task<ZarinpalUnVerifiedResponse> GetUnVerifiedAsync(
-            this ZarinClient client)
+            this IZarinClient client)
         {
             client.ThrowIfNull(nameof(client));
 
@@ -133,7 +133,7 @@ namespace ZarinSharp
         /// <param name="accessToken">Your access token from <see href="https://next.zarinpal.com"/></param>
         /// <exception cref="ZarinpalException"></exception>
         public static async Task<ZarinpalRefundResponse> RefundAsync(
-            this ZarinClient client,
+            this IZarinClient client,
             string authority,
             string accessToken)
         {
