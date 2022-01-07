@@ -26,7 +26,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
 	<PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
-	<PackageReference Include="ZarinpalSharp" Version="1.2.0" />
+	<PackageReference Include="ZarinpalSharp" Version="1.2.1" />
   </ItemGroup>
 
 </Project>
