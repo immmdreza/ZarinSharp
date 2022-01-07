@@ -2,6 +2,9 @@
 {
     public class ZarinpalConfiguration
     {
+        public ZarinpalConfiguration()
+        { }
+
         public ZarinpalConfiguration(
             string token,
             string callbackUrl,
@@ -18,12 +21,12 @@
         /// <summary>
         /// Your MerchantId or Token from <see href="https://next.zarinpal.com"/>
         /// </summary>
-        public string Token { get; set; }
+        public string? Token { get; set; }
 
         /// <summary>
         /// The callback url - User will get redireted here.
         /// </summary>
-        public string CallbackUrl { get; set; }
+        public string? CallbackUrl { get; set; }
 
         /// <summary>
         /// Indicates if requests should be sent to sandbox api - Test perpouses.

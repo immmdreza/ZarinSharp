@@ -12,6 +12,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/immmdreza/ZarinpalSharp</RepositoryUrl>
     <PackageTags>ZarinpalSharp; Zarinpal, Asp, CSharp, netstandards2.1</PackageTags>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,7 +27,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
 	<PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
-	<PackageReference Include="ZarinpalSharp" Version="1.2.1" />
+	<PackageReference Include="ZarinpalSharp" Version="1.2.1.1" />
   </ItemGroup>
 
 </Project>

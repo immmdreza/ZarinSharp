@@ -10,7 +10,7 @@ namespace ZarinSharp.Asp
         /// Adds <see cref="IZarinClient"/> to this <see cref="IServiceCollection"/>
         /// </summary>
         /// <param name="zarinpalConfiguration">Zarinpal configuration.</param>
-        public static void AddZarinSharp(this IServiceCollection services, ZarinpalConfiguration zarinpalConfiguration)
+        public static void AddZarinClient(this IServiceCollection services, ZarinpalConfiguration zarinpalConfiguration)
             => services.AddHttpClient("ZarinSharpClient")
                 .AddTypedClient<IZarinClient>(httpClient => new ZarinClient(
                     zarinpalConfiguration, httpClient));

@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrivateApplication", "Examp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZarinSharp.Asp", "ZarinSharp.Asp\ZarinSharp.Asp.csproj", "{F3499D27-531C-4F05-BCFC-DC28AA803D3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "Examples\WebApplication\WebApplication.csproj", "{015A260C-84E3-4CE1-8853-856EFBF5C771}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{F3499D27-531C-4F05-BCFC-DC28AA803D3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3499D27-531C-4F05-BCFC-DC28AA803D3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3499D27-531C-4F05-BCFC-DC28AA803D3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{015A260C-84E3-4CE1-8853-856EFBF5C771}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{015A260C-84E3-4CE1-8853-856EFBF5C771}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{015A260C-84E3-4CE1-8853-856EFBF5C771}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{015A260C-84E3-4CE1-8853-856EFBF5C771}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{2F85DD86-72EF-4F2D-9EC3-3B842D95947E} = {31B757E1-D51C-4D59-A419-ED5F379C1D75}
 		{62A61F06-F1BF-4C39-8D1D-FFF5CEB6C95D} = {31B757E1-D51C-4D59-A419-ED5F379C1D75}
+		{015A260C-84E3-4CE1-8853-856EFBF5C771} = {31B757E1-D51C-4D59-A419-ED5F379C1D75}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2AAC94CB-F058-4148-B55B-1031CCBF819A}
