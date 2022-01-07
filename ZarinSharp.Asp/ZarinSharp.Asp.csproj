@@ -12,7 +12,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/immmdreza/ZarinpalSharp</RepositoryUrl>
     <PackageTags>ZarinpalSharp; Zarinpal, Asp, CSharp, netstandards2.1</PackageTags>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
