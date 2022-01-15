@@ -101,7 +101,7 @@ namespace ZarinSharp
             if (response.Data is null)
                 throw new ZarinpalException(-1000, "Unknown error!");
 
-            response.Data.EnsureVerifiedOrDuplicated();
+            response.Data.EnsureSuccess();
 
             return response.Data;
         }
