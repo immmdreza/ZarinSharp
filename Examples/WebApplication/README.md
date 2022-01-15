@@ -28,6 +28,8 @@ Open file  `appsettings.json` and put your configs there.
 services.AddZarinClient(Configuration.GetZarinpalConfiguration());
 ```
 
+> You need [ZarinpalSharp.Asp](https://www.nuget.org/packages/ZarinpalSharp.Asp/). otherwise you should add it your self and it's not that hard! See [AspExtensions.cs](https://github.com/immmdreza/ZarinpalSharp/blob/master/ZarinSharp.Asp/AspExtensions.cs)
+
 3. ### Use it
 Use `IZarinClient` in your controller to request payments and verify them.
 
