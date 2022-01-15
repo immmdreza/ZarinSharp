@@ -13,9 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApplication", "Examp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrivateApplication", "Examples\PrivateApplication\PrivateApplication.csproj", "{62A61F06-F1BF-4C39-8D1D-FFF5CEB6C95D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZarinSharp.Asp", "ZarinSharp.Asp\ZarinSharp.Asp.csproj", "{F3499D27-531C-4F05-BCFC-DC28AA803D3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZarinSharp.Asp", "ZarinSharp.Asp\ZarinSharp.Asp.csproj", "{F3499D27-531C-4F05-BCFC-DC28AA803D3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "Examples\WebApplication\WebApplication.csproj", "{015A260C-84E3-4CE1-8853-856EFBF5C771}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication", "Examples\WebApplication\WebApplication.csproj", "{015A260C-84E3-4CE1-8853-856EFBF5C771}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
