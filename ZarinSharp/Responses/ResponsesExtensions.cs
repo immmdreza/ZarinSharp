@@ -43,7 +43,7 @@ namespace ZarinSharp
         public static void EnsureVerifiedOrDuplicated(
             this ZarinpalVerifyResponse response)
         {
-            if (response.Code != 100 || response.Code != 101)
+            if (!(response.Code == 100 || response.Code == 101))
                 throw new ZarinpalException(response.Code, response.Message);
         }
     }
